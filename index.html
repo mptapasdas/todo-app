@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript/javascript.js"></script>
+</head>
+
+<body>
+    <div class="todos-bg-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="todos-heading">Task Manager</h1>
+                    <h1 class="create-task-heading">
+                        Create <span class="create-task-heading-subpart">Task</span>
+                    </h1>
+
+
+
+                    <button id="modalOpener" type="button" class="btn btn-primary add-new-task" data-toggle="modal" data-target="#exampleModal">Add a New Task</button>
+
+                    <!--User input Modal-->
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add A New TO-DO item</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <h6 id="warningMessage" class="d-bl0ck warning-text"></h6>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Tittle:</label>
+                                            <input type="text" class="form-control" id="todoTitle">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Description</label>
+                                            <textarea class="form-control" id="todoDescription"> </textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="addTodoButton" type="button" class="btn btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h1 class="todo-items-heading mt-5">
+                        My <span class="todo-items-heading-subpart">Tasks</span>
+                    </h1>
+
+                    <div class="list-container">
+                        <ul class="todo-items-container" id="todoItemsContainer">
+
+                            <!--list-->
+                            <!--
+                        <li class="todo-item-container d-flex flex-row">
+                            <input id="checkboxInput" type="checkbox" class="checkbox-input" />
+                            <div class=" d-flex flex-row label-container">
+                                <label for="checkboxInput" class="checkbox-label">
+                                    Learn HTML
+                                </label>
+                                <div class="delete-icon-container">
+                                    <i class="fas fa-eye" data-toggle="modal" data-target="#viewTodo"></i>
+                                    <i class="far fa-trash-alt delete-icon"></i>
+                                </div>
+                            </div>
+                        </li>
+                         -->
+                        </ul>
+                    </div>
+                    <!--
+                    viewing modal
+                    -->
+                    <div class="modal fade" id="viewTodo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 id="viewModalTitle" class="modal-title">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="viewModalDescription">Modal body text goes here.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
